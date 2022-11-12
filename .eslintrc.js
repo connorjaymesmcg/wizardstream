@@ -9,6 +9,8 @@ module.exports = {
     'eslint:recommended',
     'plugin:prettier/recommended'
   ],
+  parser: 'babel-eslint',
+
   parserOptions: {
     ecmaFeatures: {
       jsx: true
@@ -24,6 +26,18 @@ module.exports = {
   ],
   plugins: ['react'],
   rules: {
+    'react/jsx-wrap-multilines': [
+      'error',
+      {
+        declaration: 'parens-new-line',
+        assignment: 'parens-new-line',
+        return: 'parens-new-line',
+        arrow: 'parens-new-line',
+        condition: 'parens-new-line',
+        logical: 'parens-new-line',
+        prop: 'parens-new-line'
+      }
+    ],
     'max-len': 0,
     'no-param-reassign': 0,
     'jsx-a11y/label-has-associated-control': 0,
